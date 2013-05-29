@@ -1,0 +1,23 @@
+{
+    "name": "zertz/photo-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony ZertzPhotoBundle",
+    "keywords": ["Photo management"],
+    "homepage": "http://github.com/Zertz/ZertzPhotoBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pier-Luc Gendreau",
+            "email": "pierluc.gendreau@gmail.com",
+            "homepage": "http://zertz.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": ">=2.1"
+    },
+    "autoload": {
+        "psr-0": { "Zertz\\PhotoBundle": "" }
+    },
+    "target-dir": "Zertz/PhotoBundle"
+}
