@@ -1,0 +1,30 @@
+services:
+    zertz.photo_listener:
+        class: Zertz\PhotoBundle\EventListener\PhotoListener
+        arguments:
+            fileManager: "@zertz.file_manager"
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }
+            - { name: doctrine.event_listener, event: preUpdate }
+            - { name: doctrine.event_listener, event: postPersist }
+            - { name: doctrine.event_listener, event: postUpdate }
+            - { name: doctrine.event_listener, event: postRemove }
+            
+    zertz.file_manager:
+        class: Zertz\PhotoBundle\File\FileManager
+        arguments:
+            container: "@service_container"
+            
+    zertz.photo_type_extension:
+      class: Zertz\PhotoBundle\Form\Extension\PhotoTypeExtension
+      arguments:
+            fileManager: "@zertz.file_manager"
+      tags:
+          - { name: form.type_extension, alias: file }
+
+    zertz.twig.photo_extension:
+        class: Zertz\PhotoBundle\Twig\PhotoExtension
+        arguments:
+            photoManager: "@zertz.file_manager"
+        tags:
+            - { name: twig.extension }

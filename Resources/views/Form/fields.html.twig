@@ -1,0 +1,12 @@
+{% extends 'form_div_layout.html.twig' %}
+
+{% block file_widget %}
+    {% spaceless %}
+
+    {{ block('form_widget') }}
+    {% if webPath is not null %}
+        <img src="{{ asset(webPath) }}"/>
+    {% endif %}
+
+    {% endspaceless %}
+{% endblock %}
