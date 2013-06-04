@@ -141,6 +141,6 @@ of the rendering:
         'format' => 'small',
     ))
 
-In a twig template, add the `path` filter and specify the format to display:
+In a Twig template, add the `path` filter and specify the format to display:
 
     <img src="{{ photo|path('medium') }}">
