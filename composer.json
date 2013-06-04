@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": ">=2.2"
+        "symfony/symfony": ">=2.2"
     },
     "autoload": {
         "psr-0": { "Zertz\\PhotoBundle": "" }
