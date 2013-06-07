@@ -69,17 +69,19 @@ Add the following lines:
                 size: { width: 635 }
                 quality: 90
 
-**Note:**
+**Note**
 
 > `directory` and `domain` keys are **required**. For JPEG photos, the `quality`
 > setting is customizable, but **defaults** to 70.
 
-**Formats:**
+**Formats**
 
 > `formats` are customizable and the `size` property may contain one of, or
 > both, `width` and `height`. The photo will automatically be resized and the
 > aspect ratio is always maintained. For JPEG photos, the **optional** `quality`
 > setting overrides the global `quality` setting.
+
+> If no `formats` are defined, then the original photo is simply uploaded.
 
 ### Extend the Photo class
 
@@ -129,7 +131,7 @@ Finally, run the following command to update the database schema:
 
     php app/console doctrine:schema:update --force
 
-5) Usage
+4) Usage
 ----------------------------------
 
 The bundle provides simple helpers to upload and display photos.
