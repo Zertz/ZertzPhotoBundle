@@ -146,3 +146,18 @@ of the rendering:
 In a Twig template, add the `path` filter and specify the format to display:
 
     <img src="{{ photo|path('medium') }}">
+
+5) FAQ
+----------------------------------
+
+- _Why doesn't the photo preview appear in my form?_
+
+If the photo doesn't appear at all, then the format request in your form doesn't
+exist. Otherwise, if the format exists, you should regenerate thumbnails
+manually using the following command:
+
+    php app/console zertz:photo:generate myformat
+
+or
+
+    php app/console zertz:photo:generate --all
