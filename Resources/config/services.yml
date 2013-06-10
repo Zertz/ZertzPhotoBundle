@@ -9,12 +9,12 @@ services:
             - { name: doctrine.event_listener, event: postPersist }
             - { name: doctrine.event_listener, event: postUpdate }
             - { name: doctrine.event_listener, event: postRemove }
-            
+
     zertz.file_manager:
         class: Zertz\PhotoBundle\File\FileManager
         arguments:
             container: "@service_container"
-            
+
     zertz.photo_type_extension:
       class: Zertz\PhotoBundle\Form\Extension\PhotoTypeExtension
       arguments:
