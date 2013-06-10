@@ -35,6 +35,7 @@ class PhotoTypeExtension extends AbstractTypeExtension
     {
         $resolver->setDefaults(array(
             'format' => null,
+            'label' => 'Photo',
         ));
     }
     
